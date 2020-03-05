@@ -2,7 +2,7 @@
 
 int main()
 {
-    unsigned int N = 0, L = 0, a[50], i = 0, j = 0, S = 0;
+    unsigned int N = 0, L = 0, a[50], i = 0, j = 0, S = 0, temp = 0;
     scanf("%d", &N);
     while(N--)
     {
@@ -19,9 +19,9 @@ int main()
                 if(a[j] > a[j+1])
                 {
                     S++;
-                    a[j] = a[j] ^ a[j+1];
-                    a[j+1] = a[j] ^ a[j+1];
-                    a[j] = a[j] ^ a[j+1];
+                    temp = a[j];
+                    a[j] = a[j+1];
+                    a[j+1] = temp;
                 }
 
             }
